@@ -1,0 +1,4 @@
+Django>=3.2,<4.0
+boto3>=1.18.0
+reportlab>=3.5.0
+django-cors-headers
