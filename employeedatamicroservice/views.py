@@ -32,4 +32,13 @@ class GenerateReportView(View):
 
 class HelloWorldView(View):
     def get(self, request):
-        return JsonResponse({'message': 'new 2 update in Hello  World from django microservice!'})    
+        return JsonResponse({'message': 'new 2 update in Hello  World from django microservice!'})
+
+
+class GetEmployeeData(View):
+    def get(self, request):
+        return JsonResponse({'QPS': '95%', 'Benefits':["401k","MedicalInsurance","CompanySponsoredTrips"],"PerformanceReviewScore":"80%"})
+
+class Authenticate(View):
+    def get(self, request):
+        return JsonResponse({'Authenticated': 'true' })
