@@ -32,4 +32,4 @@ class GenerateReportView(View):
 
 class HelloWorldView(View):
     def get(self, request):
-        return JsonResponse({'message': 'Hello, World!'})    
+        return JsonResponse({'message': 'new 2 update in Hello  World from django microservice!'})    

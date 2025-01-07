@@ -1,19 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: django-app
+  name: app-deployment
+  namespace: default
 spec:
-  replicas: 3
   selector:
     matchLabels:
-      app: django-app
+      app: application
   template:
     metadata:
       labels:
-        app: django-app
-    spec:
-      containers:
-      - name: django-app
-        image: 711387112361.dkr.ecr.us-east-1.amazonaws.com/appreposfortrainingtrinet:django-microservice-latest
+        app: application
+    spec: 
+      containers: 
+      - name: django-microservice
+        image: 825765380838.dkr.ecr.us-east-1.amazonaws.com/appreposfortrainingtrinet:django-microservice-latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 8100
